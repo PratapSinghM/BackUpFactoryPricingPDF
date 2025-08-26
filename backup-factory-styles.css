@@ -18,6 +18,8 @@ body {
     --primary-dark: #e55a2b;
     --secondary-color: #333;
     --accent-color: #fff3e0;
+    --gradient-start: #ff6b35;
+    --gradient-end: #ff8c42;
 }
 
 [data-theme="blue"] {
@@ -26,6 +28,8 @@ body {
     --primary-dark: #1976D2;
     --secondary-color: #0D47A1;
     --accent-color: #E3F2FD;
+    --gradient-start: #2196F3;
+    --gradient-end: #64B5F6;
 }
 
 [data-theme="green"] {
@@ -34,6 +38,8 @@ body {
     --primary-dark: #388E3C;
     --secondary-color: #1B5E20;
     --accent-color: #E8F5E9;
+    --gradient-start: #4CAF50;
+    --gradient-end: #81C784;
 }
 
 [data-theme="purple"] {
@@ -42,6 +48,8 @@ body {
     --primary-dark: #7B1FA2;
     --secondary-color: #4A148C;
     --accent-color: #F3E5F5;
+    --gradient-start: #9C27B0;
+    --gradient-end: #BA68C8;
 }
 
 [data-theme="red"] {
@@ -50,6 +58,8 @@ body {
     --primary-dark: #D32F2F;
     --secondary-color: #B71C1C;
     --accent-color: #FFEBEE;
+    --gradient-start: #F44336;
+    --gradient-end: #EF5350;
 }
 
 [data-theme="teal"] {
@@ -58,6 +68,8 @@ body {
     --primary-dark: #00796B;
     --secondary-color: #004D40;
     --accent-color: #E0F2F1;
+    --gradient-start: #009688;
+    --gradient-end: #4DB6AC;
 }
 
 [data-theme="indigo"] {
@@ -66,6 +78,8 @@ body {
     --primary-dark: #303F9F;
     --secondary-color: #1A237E;
     --accent-color: #E8EAF6;
+    --gradient-start: #3F51B5;
+    --gradient-end: #7986CB;
 }
 
 [data-theme="black"] {
@@ -74,6 +88,48 @@ body {
     --primary-dark: #212121;
     --secondary-color: #000000;
     --accent-color: #F5F5F5;
+    --gradient-start: #424242;
+    --gradient-end: #757575;
+}
+
+[data-theme="orange-blue"] {
+    --primary-color: #ff6b35;
+    --primary-light: #2196F3;
+    --primary-dark: #e55a2b;
+    --secondary-color: #0D47A1;
+    --accent-color: #fff3e0;
+    --gradient-start: #ff6b35;
+    --gradient-end: #2196F3;
+}
+
+[data-theme="green-purple"] {
+    --primary-color: #4CAF50;
+    --primary-light: #9C27B0;
+    --primary-dark: #388E3C;
+    --secondary-color: #4A148C;
+    --accent-color: #E8F5E9;
+    --gradient-start: #4CAF50;
+    --gradient-end: #9C27B0;
+}
+
+[data-theme="red-orange"] {
+    --primary-color: #F44336;
+    --primary-light: #ff6b35;
+    --primary-dark: #D32F2F;
+    --secondary-color: #e55a2b;
+    --accent-color: #FFEBEE;
+    --gradient-start: #F44336;
+    --gradient-end: #ff6b35;
+}
+
+[data-theme="teal-indigo"] {
+    --primary-color: #009688;
+    --primary-light: #3F51B5;
+    --primary-dark: #00796B;
+    --secondary-color: #1A237E;
+    --accent-color: #E0F2F1;
+    --gradient-start: #009688;
+    --gradient-end: #3F51B5;
 }
 
 /* Page Layout */
@@ -187,7 +243,7 @@ body {
 
 /* Price Table */
 .section-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -347,6 +403,26 @@ body {
 .theme-option[data-theme="teal"] { border-color: #009688; }
 .theme-option[data-theme="indigo"] { border-color: #3F51B5; }
 .theme-option[data-theme="black"] { border-color: #424242; }
+.theme-option[data-theme="orange-blue"] { 
+    border-color: #ff6b35; 
+    background: linear-gradient(45deg, #ff6b35, #2196F3);
+    color: white;
+}
+.theme-option[data-theme="green-purple"] { 
+    border-color: #4CAF50; 
+    background: linear-gradient(45deg, #4CAF50, #9C27B0);
+    color: white;
+}
+.theme-option[data-theme="red-orange"] { 
+    border-color: #F44336; 
+    background: linear-gradient(45deg, #F44336, #ff6b35);
+    color: white;
+}
+.theme-option[data-theme="teal-indigo"] { 
+    border-color: #009688; 
+    background: linear-gradient(45deg, #009688, #3F51B5);
+    color: white;
+}
 
 .upload-area {
     border: 3px dashed var(--primary-color);
@@ -390,7 +466,7 @@ body {
 }
 
 .upload-button {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: white;
     padding: 12px 30px;
     border: none;
@@ -403,7 +479,7 @@ body {
 }
 
 .upload-button:hover {
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
