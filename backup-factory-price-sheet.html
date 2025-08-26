@@ -34,6 +34,14 @@
                     <div class="theme-option" data-color="teal" data-type="primary">Teal</div>
                     <div class="theme-option" data-color="indigo" data-type="primary">Indigo</div>
                     <div class="theme-option" data-color="black" data-type="primary">Black</div>
+                    <div class="theme-option" data-color="gray" data-type="primary">Gray</div>
+                    <div class="theme-option" data-color="navy" data-type="primary">Navy</div>
+                </div>
+                
+                <div class="custom-color-section">
+                    <label for="primaryColorPicker">Or pick custom primary color:</label>
+                    <input type="color" id="primaryColorPicker" value="#ff6b35">
+                    <button class="apply-custom-btn" onclick="applyCustomColor('primary')">Apply</button>
                 </div>
                 
                 <h4 style="margin-top: 20px;">Choose Secondary Color</h4>
@@ -46,6 +54,14 @@
                     <div class="theme-option" data-color="teal" data-type="secondary">Teal</div>
                     <div class="theme-option" data-color="indigo" data-type="secondary">Indigo</div>
                     <div class="theme-option" data-color="black" data-type="secondary">Black</div>
+                    <div class="theme-option" data-color="gray" data-type="secondary">Gray</div>
+                    <div class="theme-option" data-color="navy" data-type="secondary">Navy</div>
+                </div>
+                
+                <div class="custom-color-section">
+                    <label for="secondaryColorPicker">Or pick custom secondary color:</label>
+                    <input type="color" id="secondaryColorPicker" value="#2196F3">
+                    <button class="apply-custom-btn" onclick="applyCustomColor('secondary')">Apply</button>
                 </div>
                 
                 <div class="color-preview" id="colorPreview">
@@ -54,6 +70,18 @@
                         <div class="preview-secondary"></div>
                     </div>
                     <p>Preview: Primary + Secondary</p>
+                </div>
+                
+                <div class="preset-combinations">
+                    <h4>Popular Combinations</h4>
+                    <div class="preset-options">
+                        <button class="preset-btn" onclick="applyPreset('orange', 'blue')">Orange + Blue</button>
+                        <button class="preset-btn" onclick="applyPreset('green', 'navy')">Green + Navy</button>
+                        <button class="preset-btn" onclick="applyPreset('purple', 'gray')">Purple + Gray</button>
+                        <button class="preset-btn" onclick="applyPreset('red', 'black')">Red + Black</button>
+                        <button class="preset-btn" onclick="applyPreset('teal', 'indigo')">Teal + Indigo</button>
+                        <button class="preset-btn" onclick="applyPreset('navy', 'orange')">Navy + Orange</button>
+                    </div>
                 </div>
             </div>
             
