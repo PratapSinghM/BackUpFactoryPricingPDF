@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup Factory - Battery Price List</title>
+    <link rel="stylesheet" href="backup-factory-styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="battery-icon"></div>
+                    <span class="plug-icon">🔌</span>
+                </div>
+                <div class="company-name">
+                    <span class="backup">BACKUP</span>
+                    <span class="factory">FACTORY</span>
+                </div>
+            </div>
+            
+            <h2>Battery Price List Generator</h2>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Click to upload or drag & drop</div>
+                <div class="upload-subtext">BatteryPricing.json</div>
+            </div>
+            
+            <input type="file" id="fileInput" class="file-input" accept=".json">
+            <button class="upload-button" id="uploadButton">Choose JSON File</button>
+            
+            <div id="messageArea"></div>
+            
+            <div class="instructions">
+                <h4>JSON Format Required:</h4>
+                <pre>{
+    "BrandName": [
+        {
+            "name": "Model Name",
+            "price": 999,
+            "series": "Series Name"
+        }
+    ]
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Price List Container -->
+        <div id="priceListContainer"></div>
+    </div>
+    
+    <script src="backup-factory-script.js"></script>
+</body>
+</html>

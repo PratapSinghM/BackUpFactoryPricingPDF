@@ -1,0 +1,2105 @@
+{
+    "iPhone": [
+        {
+            "name": "iPhone 5G Battery",
+            "price": 380,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 5S Battery",
+            "price": 350,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 6G Battery",
+            "price": 390,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 6 Plus Battery",
+            "price": 540,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 6S Battery",
+            "price": 390,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 6S Plus Battery",
+            "price": 540,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 7G Battery",
+            "price": 420,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 7 Plus Battery",
+            "price": 530,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 8G Battery",
+            "price": 420,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 8 Plus Battery",
+            "price": 530,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone X Battery",
+            "price": 590,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone XR Battery",
+            "price": 600,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone XS Battery",
+            "price": 670,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone XS Max Battery",
+            "price": 750,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 11 Battery",
+            "price": 600,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 11 Pro Battery",
+            "price": 690,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 11 Pro Max Battery",
+            "price": 830,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 12 Battery",
+            "price": 650,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 12 Mini Battery",
+            "price": 600,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 12 Pro Battery",
+            "price": 650,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 12 Pro Max Battery",
+            "price": 950,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 13 Battery",
+            "price": 680,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 13 Mini Battery",
+            "price": 650,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 13 Pro Battery",
+            "price": 800,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 13 Pro Max Battery",
+            "price": 950,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 14 Battery",
+            "price": 600,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 14 Plus Battery",
+            "price": 950,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 14 Pro Battery",
+            "price": 850,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 14 Pro Max Battery",
+            "price": 950,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 15 Battery",
+            "price": 650,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 15 Plus Battery",
+            "price": 1050,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 15 Pro Battery",
+            "price": 1080,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone 15 Pro Max Battery",
+            "price": 1280,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone SE 2020 Battery",
+            "price": 400,
+            "series": "i-Series"
+        },
+        {
+            "name": "iPhone SE3 Battery",
+            "price": 450,
+            "series": "i-Series"
+        }
+    ],
+    "Samsung": [
+        {
+            "name": "Galaxy A11 Battery",
+            "price": 390,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A71 Battery",
+            "price": 340,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A01 Battery",
+            "price": 370,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A10E/A20E Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A10/M10/A750 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A10S/A20S Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A30S/A50S Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A31 Battery",
+            "price": 390,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A40 Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A50/A30 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A51 Battery",
+            "price": 340,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A70 Battery",
+            "price": 380,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy A8 Battery",
+            "price": 380,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J1 Battery",
+            "price": 210,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J2 Battery",
+            "price": 220,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J5 Battery",
+            "price": 220,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J5 Prime Battery",
+            "price": 340,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J7 Battery",
+            "price": 260,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J7 Prime Battery",
+            "price": 270,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy J8 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy M01 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy M20 Battery",
+            "price": 400,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy M30 Battery",
+            "price": 400,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy M30S/M21/M31 Battery",
+            "price": 390,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 3 Battery",
+            "price": 275,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 4 Battery",
+            "price": 300,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 5 Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 8 Battery",
+            "price": 370,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 9 Battery",
+            "price": 370,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 10 Battery",
+            "price": 420,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy Note 10 Plus Battery",
+            "price": 430,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S5 Battery",
+            "price": 300,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S6 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S6 Edge Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S7 Battery",
+            "price": 350,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S7 Edge Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S8 Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S8 Plus Battery",
+            "price": 360,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S9 Battery",
+            "price": 365,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S9 Plus Battery",
+            "price": 370,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S10 Battery",
+            "price": 380,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S10E Battery",
+            "price": 380,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S10 Plus Battery",
+            "price": 370,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S20 Battery",
+            "price": 420,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S20 Plus Battery",
+            "price": 420,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S21 Battery",
+            "price": 470,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S21 Plus Battery",
+            "price": 490,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S21 Ultra Battery",
+            "price": 410,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S22 Battery",
+            "price": 400,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S22 Plus Battery",
+            "price": 420,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S22 Ultra Battery",
+            "price": 420,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S23 Battery",
+            "price": 410,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S23 Plus Battery",
+            "price": 430,
+            "series": "Galaxy"
+        },
+        {
+            "name": "Galaxy S23 Ultra Battery",
+            "price": 430,
+            "series": "Galaxy"
+        }
+    ],
+    "Google Pixel": [
+        {
+            "name": "Google Pixel 3 Battery",
+            "price": 480,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 4 Battery",
+            "price": 480,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 4A Battery",
+            "price": 480,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 4A XL Battery",
+            "price": 450,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 5 Battery",
+            "price": 500,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 5A Battery",
+            "price": 480,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 5 XL Battery",
+            "price": 540,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 6 Battery",
+            "price": 470,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 6A Battery",
+            "price": 520,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 6 Pro Battery",
+            "price": 480,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 7 Battery",
+            "price": 500,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 7A Battery",
+            "price": 500,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 7 Pro Battery",
+            "price": 500,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel 8 Battery",
+            "price": 520,
+            "series": "Pixel"
+        },
+        {
+            "name": "Google Pixel XL Battery",
+            "price": 450,
+            "series": "Pixel"
+        }
+    ],
+    "OnePlus": [
+        {
+            "name": "OnePlus 1 (BLP571) Battery",
+            "price": 370,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 2 (BLP597) Battery",
+            "price": 370,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 3 (BLP613) Battery",
+            "price": 460,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 3T (BLP633) Battery",
+            "price": 430,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 5/5T (BLP637) Battery",
+            "price": 400,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 6 (BLP657) Battery",
+            "price": 410,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 6T (BLP685) Battery",
+            "price": 390,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 7 (BLP685) Battery",
+            "price": 390,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 7 Pro (BLP699) Battery",
+            "price": 410,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 7T (BLP743) Battery",
+            "price": 410,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 7T Pro (BLP745) Battery",
+            "price": 460,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 8 (BLP761) Battery",
+            "price": 450,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 8 Pro (BLP759) Battery",
+            "price": 470,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 8T (BLP801) Battery",
+            "price": 880,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 9 (BLP829) Battery",
+            "price": 750,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 9 Pro (BLP827) Battery",
+            "price": 900,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 10 Pro (BLP899) Battery",
+            "price": 850,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus 11 5G (BLP975) Battery",
+            "price": 850,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord (BLP785) Battery",
+            "price": 420,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord 2 (BLP861) Battery",
+            "price": 750,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord CE (BLP845) Battery",
+            "price": 600,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord CE2 Lite (BLP927) Battery",
+            "price": 450,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord CE3 Lite (BLP989) Battery",
+            "price": 500,
+            "series": "OnePlus"
+        },
+        {
+            "name": "OnePlus Nord CE4 (BLPA45) Battery",
+            "price": 820,
+            "series": "OnePlus"
+        }
+    ],
+    "Xiaomi": [
+        {
+            "name": "Mi BM33 Battery",
+            "price": 340,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM41 Battery",
+            "price": 220,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM42 Battery",
+            "price": 260,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM44 Battery",
+            "price": 230,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM46 Battery",
+            "price": 370,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM47 Battery",
+            "price": 370,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM49 Battery",
+            "price": 410,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM50 Battery",
+            "price": 410,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN30 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN31 Battery",
+            "price": 320,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN34 Battery",
+            "price": 320,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN35 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN36 Battery",
+            "price": 320,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN37 Battery",
+            "price": 320,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN43 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN44 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN45 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN46 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN47 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN48 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN49 Battery",
+            "price": 350,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN51 Battery",
+            "price": 380,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN52 Battery",
+            "price": 380,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN53 Battery",
+            "price": 380,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN54 Battery",
+            "price": 380,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN55 Battery",
+            "price": 420,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN56 Battery",
+            "price": 390,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN57 Battery",
+            "price": 400,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN59 Battery",
+            "price": 390,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN62 Battery",
+            "price": 390,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BN65 Battery",
+            "price": 480,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM54 Battery",
+            "price": 430,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM56 Battery",
+            "price": 600,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM57 Battery",
+            "price": 600,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BM58 Battery",
+            "price": 850,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BP43 Battery",
+            "price": 850,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BP46 Battery",
+            "price": 850,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BP47 Battery",
+            "price": 850,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BP48 Battery",
+            "price": 850,
+            "series": "Mi"
+        },
+        {
+            "name": "Mi BP49 Battery",
+            "price": 850,
+            "series": "Mi"
+        }
+    ],
+    "OPPO": [
+        {
+            "name": "OPPO BLP577 Battery",
+            "price": 250,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP601 Battery",
+            "price": 360,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP605/A33 Battery",
+            "price": 330,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP615 Battery",
+            "price": 330,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP619 Battery",
+            "price": 350,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP621 Battery",
+            "price": 430,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP623 Battery",
+            "price": 430,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP631 Battery",
+            "price": 360,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP641 Battery",
+            "price": 350,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP649 Battery",
+            "price": 350,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP661 Battery",
+            "price": 350,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP665 Battery",
+            "price": 340,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP673 Battery",
+            "price": 350,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP681 Battery",
+            "price": 390,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP693/Realme 3 Battery",
+            "price": 370,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP697 Battery",
+            "price": 390,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP701 Battery",
+            "price": 460,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP707 Battery",
+            "price": 420,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP709 Battery",
+            "price": 460,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP713 Battery",
+            "price": 420,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP715 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP717 Battery",
+            "price": 410,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP721 Battery",
+            "price": 340,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP723 Battery",
+            "price": 440,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP727/A5 2020 Battery",
+            "price": 380,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP735 Battery",
+            "price": 460,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP741 Battery",
+            "price": 440,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP755 Battery",
+            "price": 470,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP757 Battery",
+            "price": 430,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP781 Battery",
+            "price": 470,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP797 Battery",
+            "price": 435,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP807 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP823 Battery",
+            "price": 900,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP831 Battery",
+            "price": 880,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP837 Battery",
+            "price": 560,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP841 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP843 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP849 Battery",
+            "price": 880,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP851 Battery",
+            "price": 490,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP855 Battery",
+            "price": 800,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP889 Battery",
+            "price": 880,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP893 Battery",
+            "price": 590,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP907 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP911 Battery",
+            "price": 470,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP915 Battery",
+            "price": 410,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP923 Battery",
+            "price": 390,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP929 Battery",
+            "price": 850,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP933 Battery",
+            "price": 650,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP935 Battery",
+            "price": 540,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP951 Battery",
+            "price": 570,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP957 Battery",
+            "price": 460,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP965 Battery",
+            "price": 560,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP981 Battery",
+            "price": 520,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP983 Battery",
+            "price": 450,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP995 Battery",
+            "price": 750,
+            "series": "OPPO"
+        },
+        {
+            "name": "OPPO BLP999 Battery",
+            "price": 450,
+            "series": "OPPO"
+        }
+    ],
+    "Vivo": [
+        {
+            "name": "Vivo B05 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B08 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B1/Y55 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B2/V5/Y66 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B83 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B95/Y51 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BA7/V3 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo B3 Battery",
+            "price": 360,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BB9 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BC1/Y53 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BC8 Battery",
+            "price": 340,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BC9 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BD1 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BD5 Battery",
+            "price": 340,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BD9 Battery",
+            "price": 340,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BE1 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BE5 Battery",
+            "price": 320,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BE8 Battery",
+            "price": 330,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BF3 Battery",
+            "price": 350,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BG1 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BG2 Battery",
+            "price": 400,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BG5 Battery",
+            "price": 370,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BG6 Battery",
+            "price": 370,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BG7 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BH1 Battery",
+            "price": 400,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BK2 Battery",
+            "price": 390,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BK3 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BK6 Battery",
+            "price": 410,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BK7 Battery",
+            "price": 600,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BM3 Battery",
+            "price": 390,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BM7 Battery",
+            "price": 420,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BN1 Battery",
+            "price": 390,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BN5 Battery",
+            "price": 530,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BN6 Battery",
+            "price": 400,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BN8 Battery",
+            "price": 390,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BS6 Battery",
+            "price": 480,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BT6 Battery",
+            "price": 420,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BT7 Battery",
+            "price": 420,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BU2 Battery",
+            "price": 440,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BU6 Battery",
+            "price": 850,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BV8 Battery",
+            "price": 850,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BW2 Battery",
+            "price": 600,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BX5 Battery",
+            "price": 830,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BX7 Battery",
+            "price": 450,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BY1 Battery",
+            "price": 430,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BZ5 Battery",
+            "price": 380,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BZ6 Battery",
+            "price": 420,
+            "series": "Vivo"
+        },
+        {
+            "name": "Vivo BZ7 Battery",
+            "price": 450,
+            "series": "Vivo"
+        }
+    ],
+    "Motorola": [
+        {
+            "name": "Moto ED30 Battery",
+            "price": 255,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto EL40 Battery",
+            "price": 255,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto FC40 Battery",
+            "price": 320,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto FL40 Battery",
+            "price": 335,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto GA40 Battery",
+            "price": 340,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto GK40 Battery",
+            "price": 270,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto GK50 Battery",
+            "price": 270,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto GL40 Battery",
+            "price": 330,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HC60 Battery",
+            "price": 270,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HE50 Battery",
+            "price": 410,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HG30 Battery",
+            "price": 330,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HG40 Battery",
+            "price": 350,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HX40 Battery",
+            "price": 340,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto HZ40 Battery",
+            "price": 350,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto JK50 Battery",
+            "price": 380,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto KG40 Battery",
+            "price": 430,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto KR40 Battery",
+            "price": 410,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto LG50 Battery",
+            "price": 380,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto MB40 Battery",
+            "price": 420,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto MC50 Battery",
+            "price": 400,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto MD50 Battery",
+            "price": 430,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto MH60 Battery",
+            "price": 460,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto MS50 Battery",
+            "price": 460,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto NC50 Battery",
+            "price": 400,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto ND40 Battery",
+            "price": 420,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto ND50 Battery",
+            "price": 380,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto NE50 Battery",
+            "price": 430,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto NH40 Battery",
+            "price": 440,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto NH50 Battery",
+            "price": 440,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto NT50 Battery",
+            "price": 400,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto PC50 Battery",
+            "price": 450,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto PC60 Battery",
+            "price": 460,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto QB50 Battery",
+            "price": 420,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto QE50 Battery",
+            "price": 400,
+            "series": "Moto"
+        },
+        {
+            "name": "Moto QF50 Battery",
+            "price": 390,
+            "series": "Moto"
+        }
+    ],
+    "Nokia": [
+        {
+            "name": "Nokia 1 Battery",
+            "price": 210,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia BL4C Battery",
+            "price": 110,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia BL4UL Battery",
+            "price": 130,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia BL5C Battery",
+            "price": 100,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia BP4L Battery",
+            "price": 125,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia C1 Battery",
+            "price": 250,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia C1 Plus Battery",
+            "price": 230,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia C2 Battery",
+            "price": 270,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE316 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE317 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE319/Nokia 3 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE321 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE328 Battery",
+            "price": 340,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE330 Battery",
+            "price": 360,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE335 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE336 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE338/Nokia 2 Battery",
+            "price": 370,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE341 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE342 Battery",
+            "price": 340,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE345 Battery",
+            "price": 340,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE346 Battery",
+            "price": 380,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE347 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE363 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE376 Battery",
+            "price": 340,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HE377 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HQ430 Battery",
+            "price": 400,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HQ510 Battery",
+            "price": 270,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia HQ610 Battery",
+            "price": 400,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia LC440 Battery",
+            "price": 410,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia LC620 Battery",
+            "price": 380,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia SP330 Battery",
+            "price": 270,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia SP410 Battery",
+            "price": 390,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT140 Battery",
+            "price": 250,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT240 Battery",
+            "price": 340,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT242 Battery",
+            "price": 360,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT330 Battery",
+            "price": 350,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT340 Battery",
+            "price": 400,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT341 Battery",
+            "price": 390,
+            "series": "Nokia"
+        },
+        {
+            "name": "Nokia WT510 Battery",
+            "price": 370,
+            "series": "Nokia"
+        }
+    ],
+    "Infinix": [
+        {
+            "name": "Infinix BL30VX Battery",
+            "price": 350,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39AX Battery",
+            "price": 380,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39EX Battery",
+            "price": 400,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39GX Battery",
+            "price": 380,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39HX Battery",
+            "price": 370,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39JX Battery",
+            "price": 370,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39KX Battery",
+            "price": 380,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL39LX Battery",
+            "price": 380,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL40AX Battery",
+            "price": 465,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL42AX Battery",
+            "price": 400,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL48DX Battery",
+            "price": 400,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL49FX Battery",
+            "price": 390,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL49GX Battery",
+            "price": 390,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL49KX Battery",
+            "price": 380,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL49NX Battery",
+            "price": 410,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL49TX Battery",
+            "price": 410,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL51BX Battery",
+            "price": 390,
+            "series": "Infinix"
+        },
+        {
+            "name": "Infinix BL58BX Battery",
+            "price": 420,
+            "series": "Infinix"
+        }
+    ],
+    "Tecno": [
+        {
+            "name": "Tecno BL29BT Battery",
+            "price": 240,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL30UT Battery",
+            "price": 350,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL30VT Battery",
+            "price": 350,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL34CT Battery",
+            "price": 370,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL36BT Battery",
+            "price": 380,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL39BT Battery",
+            "price": 380,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL39LT Battery",
+            "price": 350,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL49FT Battery",
+            "price": 390,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL49NT Battery",
+            "price": 410,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL49OT Battery",
+            "price": 400,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL58BT Battery",
+            "price": 420,
+            "series": "Tecno"
+        },
+        {
+            "name": "Tecno BL58CT Battery",
+            "price": 420,
+            "series": "Tecno"
+        }
+    ],
+    "Lenovo": [
+        {
+            "name": "Lenovo A6000 Battery",
+            "price": 230,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo A7000 Battery",
+            "price": 250,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL234 Battery",
+            "price": 370,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL253/A1000 Battery",
+            "price": 210,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL255 Battery",
+            "price": 285,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL256 Battery",
+            "price": 350,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL259 Battery",
+            "price": 220,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL261 Battery",
+            "price": 350,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL265 Battery",
+            "price": 340,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL268 Battery",
+            "price": 360,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL270 Battery",
+            "price": 370,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL272 Battery",
+            "price": 380,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL273 Battery",
+            "price": 360,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL291 Battery",
+            "price": 370,
+            "series": "Lenovo"
+        },
+        {
+            "name": "Lenovo BL295 Battery",
+            "price": 360,
+            "series": "Lenovo"
+        }
+    ],
+    "HTC": [
+        {
+            "name": "HTC 620 Battery",
+            "price": 250,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC 626 Battery",
+            "price": 340,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC 728 Battery",
+            "price": 340,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC 816 Battery",
+            "price": 340,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC 820/826 Battery",
+            "price": 340,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC 828 Battery",
+            "price": 330,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC D526 Battery",
+            "price": 230,
+            "series": "HTC"
+        },
+        {
+            "name": "HTC X-9 Battery",
+            "price": 340,
+            "series": "HTC"
+        }
+    ],
+    "Honor/Huawei": [
+        {
+            "name": "Honor 4X Battery",
+            "price": 340,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 5X Battery",
+            "price": 340,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 6X Battery",
+            "price": 350,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 7X Battery",
+            "price": 360,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 8X Battery",
+            "price": 360,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 8 Pro Battery",
+            "price": 290,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor 10 Lite Battery",
+            "price": 360,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor P9 Lite/P9 Battery",
+            "price": 340,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB405979ECW Battery",
+            "price": 350,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB4342A1RBC Battery",
+            "price": 220,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB434666RBC Battery",
+            "price": 180,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB505076RBC Battery",
+            "price": 190,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB5V1 Battery",
+            "price": 190,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB406689/8C/Mate9 Battery",
+            "price": 400,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor HB526379/Y6 Pro Battery",
+            "price": 360,
+            "series": "Honor"
+        },
+        {
+            "name": "Honor U19/HB474284RBC Battery",
+            "price": 190,
+            "series": "Honor"
+        }
+    ]
+}
