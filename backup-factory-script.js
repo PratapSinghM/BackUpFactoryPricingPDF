@@ -1,7 +1,7 @@
 // Configuration
 const CONFIG = {
-    itemsPerPageFirst: 15,  // First page (has title)
-    itemsPerPage: 16,        // Subsequent pages
+    itemsPerPageFirst: 15,
+    itemsPerPage: 16,
     company: {
         phone: '+91 98765 43210',
         email: 'info@backupfactory.com',
@@ -11,13 +11,39 @@ const CONFIG = {
 
 // Global variables
 let pricingData = null;
+let currentTheme = 'orange';
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Initializing Backup Factory Price List Generator...');
     setupUploadHandlers();
+    setupThemeHandlers();
     tryLoadFromFileSystem();
 });
+
+// Setup theme handlers
+function setupThemeHandlers() {
+    const themeOptions = document.querySelectorAll('.theme-option');
+    
+    themeOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Remove active class from all options
+            themeOptions.forEach(opt => opt.classList.remove('active'));
+            
+            // Add active class to clicked option
+            option.classList.add('active');
+            
+            // Change theme
+            currentTheme = option.dataset.theme;
+            document.body.setAttribute('data-theme', currentTheme);
+            
+            // If price list is already generated, regenerate with new theme
+            if (pricingData && document.getElementById('priceListContainer').innerHTML) {
+                generatePriceList();
+            }
+        });
+    });
+}
 
 // Setup upload handlers
 function setupUploadHandlers() {
@@ -25,11 +51,9 @@ function setupUploadHandlers() {
     const uploadButton = document.getElementById('uploadButton');
     const fileInput = document.getElementById('fileInput');
 
-    // Click handlers
     uploadArea.addEventListener('click', () => fileInput.click());
     uploadButton.addEventListener('click', () => fileInput.click());
 
-    // Drag and drop handlers
     uploadArea.addEventListener('dragover', (e) => {
         e.preventDefault();
         uploadArea.classList.add('drag-over');
@@ -49,7 +73,6 @@ function setupUploadHandlers() {
         }
     });
 
-    // File input change handler
     fileInput.addEventListener('change', (e) => {
         if (e.target.files.length > 0) {
             handleFile(e.target.files[0]);
@@ -60,8 +83,8 @@ function setupUploadHandlers() {
 // Try to load from file system
 async function tryLoadFromFileSystem() {
     try {
-        console.log('Attempting to load BatteryPricing.json...');
-        const fileContent = await window.fs.readFile('BatteryPricing.json', { encoding: 'utf8' });
+        console.log('Attempting to load BackUpFactoryPricingList.json...');
+        const fileContent = await window.fs.readFile('BackUpFactoryPricingList.json', { encoding: 'utf8' });
         const data = JSON.parse(fileContent);
         console.log('File loaded successfully from file system');
         
@@ -147,14 +170,11 @@ function validateJSON(data) {
 function generatePriceList() {
     console.log('Generating price list...');
     
-    // Hide upload section
     document.getElementById('uploadSection').style.display = 'none';
     
-    // Clear container
     const container = document.getElementById('priceListContainer');
     container.innerHTML = '';
     
-    // Prepare all items with brand info
     let allItems = [];
     for (const brand in pricingData) {
         for (const item of pricingData[brand]) {
@@ -168,45 +188,36 @@ function generatePriceList() {
     
     console.log(`Total items: ${allItems.length}`);
     
-    // Create pages
     let pages = [];
-    let currentPage = [];
     let pageNum = 1;
     
-    // First page can hold fewer items
     const firstPageLimit = CONFIG.itemsPerPageFirst;
     const regularPageLimit = CONFIG.itemsPerPage;
     
-for (const brand in pricingData) {
-    const brandItems = pricingData[brand];
-    let index = 0;
+    for (const brand in pricingData) {
+        const brandItems = pricingData[brand];
+        let index = 0;
 
-    // Always start a new page for each brand
-    while (index < brandItems.length) {
-        const limit = pageNum === 1 ? firstPageLimit : regularPageLimit;
+        while (index < brandItems.length) {
+            const limit = pageNum === 1 ? firstPageLimit : regularPageLimit;
+            const chunk = brandItems.slice(index, index + limit);
 
-        // Take up to `limit` items for this page
-        const chunk = brandItems.slice(index, index + limit);
+            pages.push({
+                number: pageNum,
+                items: chunk.map(item => ({
+                    brand: brand,
+                    name: item.name,
+                    price: item.price
+                }))
+            });
 
-        // Store this page with only this brand's items
-        pages.push({
-            number: pageNum,
-            items: chunk.map(item => ({
-                brand: brand,
-                name: item.name,
-                price: item.price
-            }))
-        });
-
-        index += chunk.length;
-        pageNum++;
+            index += chunk.length;
+            pageNum++;
+        }
     }
-}
-
     
     console.log(`Created ${pages.length} pages`);
     
-    // Generate HTML for each page
     let serialNumber = 1;
     for (const page of pages) {
         const pageHTML = createPage(page, pages.length, serialNumber);
@@ -227,7 +238,6 @@ function createPage(page, totalPages, startSerial) {
             <div class="content-area">
     `;
     
-    // Group items by brand
     let brandGroups = {};
     let serial = startSerial;
     
@@ -241,7 +251,6 @@ function createPage(page, totalPages, startSerial) {
         });
     }
     
-    // Create tables for each brand
     for (const brand in brandGroups) {
         html += `
             <div class="section-header">${brand.toUpperCase()} SERIES</div>
@@ -287,8 +296,7 @@ function createHeader() {
         <div class="header">
             <div class="logo-section">
                 <div class="logo">
-                    <div class="battery-icon"></div>
-                    <span class="plug-icon">🔌</span>
+                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/logo%20factory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
                 </div>
                 <div class="company-name">
                     <span class="backup">BACKUP</span>
@@ -347,45 +355,14 @@ function showLoading() {
     `;
 }
 
-// Sample data for testing
+// Load sample data for testing
 function loadSampleData() {
     pricingData = {
         "iPhone": [
             { "name": "iPhone 5G Battery", "price": 380 },
             { "name": "iPhone 5S Battery", "price": 350 },
             { "name": "iPhone 6G Battery", "price": 390 },
-            { "name": "iPhone 6 Plus Battery", "price": 540 },
-            { "name": "iPhone 6S Battery", "price": 390 },
-            { "name": "iPhone 6S Plus Battery", "price": 540 },
-            { "name": "iPhone 7G Battery", "price": 420 },
-            { "name": "iPhone 7 Plus Battery", "price": 530 },
-            { "name": "iPhone 8G Battery", "price": 420 },
-            { "name": "iPhone 8 Plus Battery", "price": 530 },
-            { "name": "iPhone X Battery", "price": 590 },
-            { "name": "iPhone XR Battery", "price": 600 },
-            { "name": "iPhone XS Battery", "price": 670 },
-            { "name": "iPhone XS Max Battery", "price": 750 },
-            { "name": "iPhone 11 Battery", "price": 600 },
-            { "name": "iPhone 11 Pro Battery", "price": 690 },
-            { "name": "iPhone 11 Pro Max Battery", "price": 830 },
-            { "name": "iPhone 12 Battery", "price": 650 },
-            { "name": "iPhone 12 Mini Battery", "price": 600 },
-            { "name": "iPhone 12 Pro Battery", "price": 650 },
-            { "name": "iPhone 12 Pro Max Battery", "price": 950 },
-            { "name": "iPhone 13 Battery", "price": 680 },
-            { "name": "iPhone 13 Mini Battery", "price": 650 },
-            { "name": "iPhone 13 Pro Battery", "price": 800 },
-            { "name": "iPhone 13 Pro Max Battery", "price": 950 },
-            { "name": "iPhone 14 Battery", "price": 600 },
-            { "name": "iPhone 14 Plus Battery", "price": 950 },
-            { "name": "iPhone 14 Pro Battery", "price": 850 },
-            { "name": "iPhone 14 Pro Max Battery", "price": 950 },
-            { "name": "iPhone 15 Battery", "price": 650 },
-            { "name": "iPhone 15 Plus Battery", "price": 1050 },
-            { "name": "iPhone 15 Pro Battery", "price": 1080 },
-            { "name": "iPhone 15 Pro Max Battery", "price": 1280 },
-            { "name": "iPhone SE 2020 Battery", "price": 400 },
-            { "name": "iPhone SE3 Battery", "price": 450 }
+            { "name": "iPhone 6 Plus Battery", "price": 540 }
         ],
         "Samsung": [
             { "name": "Galaxy A11 Battery", "price": 390 },
