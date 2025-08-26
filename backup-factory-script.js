@@ -11,13 +11,27 @@ const CONFIG = {
 
 // Global variables
 let pricingData = null;
-let currentTheme = 'orange';
+let primaryColor = 'orange';
+let secondaryColor = 'blue';
+
+// Color definitions
+const colors = {
+    orange: { main: '#ff6b35', light: '#ff8c42', dark: '#e55a2b' },
+    blue: { main: '#2196F3', light: '#64B5F6', dark: '#1976D2' },
+    green: { main: '#4CAF50', light: '#81C784', dark: '#388E3C' },
+    purple: { main: '#9C27B0', light: '#BA68C8', dark: '#7B1FA2' },
+    red: { main: '#F44336', light: '#EF5350', dark: '#D32F2F' },
+    teal: { main: '#009688', light: '#4DB6AC', dark: '#00796B' },
+    indigo: { main: '#3F51B5', light: '#7986CB', dark: '#303F9F' },
+    black: { main: '#424242', light: '#757575', dark: '#212121' }
+};
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Initializing Backup Factory Price List Generator...');
     setupUploadHandlers();
     setupThemeHandlers();
+    updateTheme(); // Initialize with default colors
     tryLoadFromFileSystem();
 });
 
@@ -27,22 +41,57 @@ function setupThemeHandlers() {
     
     themeOptions.forEach(option => {
         option.addEventListener('click', () => {
-            // Remove active class from all options
-            themeOptions.forEach(opt => opt.classList.remove('active'));
+            const colorType = option.dataset.type;
+            const colorName = option.dataset.color;
             
-            // Add active class to clicked option
-            option.classList.add('active');
-            
-            // Change theme
-            currentTheme = option.dataset.theme;
-            document.body.setAttribute('data-theme', currentTheme);
-            
-            // If price list is already generated, regenerate with new theme
-            if (pricingData && document.getElementById('priceListContainer').innerHTML) {
-                generatePriceList();
+            if (colorType === 'primary') {
+                // Remove active class from primary options
+                document.querySelectorAll('.theme-option[data-type="primary"]').forEach(opt => 
+                    opt.classList.remove('active'));
+                option.classList.add('active');
+                primaryColor = colorName;
+            } else if (colorType === 'secondary') {
+                // Remove active class from secondary options
+                document.querySelectorAll('.theme-option[data-type="secondary"]').forEach(opt => 
+                    opt.classList.remove('active'));
+                option.classList.add('active');
+                secondaryColor = colorName;
             }
+            
+            updateTheme();
         });
     });
+}
+
+// Update theme with selected colors
+function updateTheme() {
+    const root = document.documentElement;
+    const primary = colors[primaryColor];
+    const secondary = colors[secondaryColor];
+    
+    root.style.setProperty('--primary-color', primary.main);
+    root.style.setProperty('--primary-light', primary.light);
+    root.style.setProperty('--primary-dark', primary.dark);
+    root.style.setProperty('--secondary-color', secondary.main);
+    root.style.setProperty('--secondary-light', secondary.light);
+    root.style.setProperty('--secondary-dark', secondary.dark);
+    
+    // Update preview
+    updateColorPreview();
+    
+    // If price list is already generated, regenerate with new colors
+    if (pricingData && document.getElementById('priceListContainer').innerHTML) {
+        generatePriceList();
+    }
+}
+
+// Update color preview
+function updateColorPreview() {
+    const primaryPreview = document.querySelector('.preview-primary');
+    const secondaryPreview = document.querySelector('.preview-secondary');
+    
+    if (primaryPreview) primaryPreview.style.background = colors[primaryColor].main;
+    if (secondaryPreview) secondaryPreview.style.background = colors[secondaryColor].main;
 }
 
 // Setup upload handlers
