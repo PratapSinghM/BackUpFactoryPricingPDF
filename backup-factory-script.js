@@ -13,6 +13,8 @@ const CONFIG = {
 let pricingData = null;
 let primaryColor = 'orange';
 let secondaryColor = 'blue';
+let customPrimaryColor = null;
+let customSecondaryColor = null;
 
 // Color definitions
 const colors = {
@@ -23,8 +25,87 @@ const colors = {
     red: { main: '#F44336', light: '#EF5350', dark: '#D32F2F' },
     teal: { main: '#009688', light: '#4DB6AC', dark: '#00796B' },
     indigo: { main: '#3F51B5', light: '#7986CB', dark: '#303F9F' },
-    black: { main: '#424242', light: '#757575', dark: '#212121' }
+    black: { main: '#424242', light: '#757575', dark: '#212121' },
+    gray: { main: '#6C757D', light: '#ADB5BD', dark: '#495057' },
+    navy: { main: '#1B365D', light: '#2E5984', dark: '#0D1B2A' }
 };
+
+// Function to generate light and dark shades from any color
+function generateColorShades(hexColor) {
+    // Remove # if present
+    hexColor = hexColor.replace('#', '');
+    
+    // Convert hex to RGB
+    const r = parseInt(hexColor.substr(0, 2), 16);
+    const g = parseInt(hexColor.substr(2, 2), 16);
+    const b = parseInt(hexColor.substr(4, 2), 16);
+    
+    // Generate lighter shade (increase RGB values by 20%)
+    const lightR = Math.min(255, Math.floor(r + (255 - r) * 0.3));
+    const lightG = Math.min(255, Math.floor(g + (255 - g) * 0.3));
+    const lightB = Math.min(255, Math.floor(b + (255 - b) * 0.3));
+    
+    // Generate darker shade (decrease RGB values by 20%)
+    const darkR = Math.floor(r * 0.7);
+    const darkG = Math.floor(g * 0.7);
+    const darkB = Math.floor(b * 0.7);
+    
+    return {
+        main: '#' + hexColor,
+        light: `rgb(${lightR}, ${lightG}, ${lightB})`,
+        dark: `rgb(${darkR}, ${darkG}, ${darkB})`
+    };
+}
+
+// Apply custom color
+function applyCustomColor(type) {
+    if (type === 'primary') {
+        const colorValue = document.getElementById('primaryColorPicker').value;
+        customPrimaryColor = generateColorShades(colorValue);
+        primaryColor = 'custom-primary';
+        
+        // Clear active state from preset options
+        document.querySelectorAll('.theme-option[data-type="primary"]').forEach(opt => 
+            opt.classList.remove('active'));
+        
+    } else if (type === 'secondary') {
+        const colorValue = document.getElementById('secondaryColorPicker').value;
+        customSecondaryColor = generateColorShades(colorValue);
+        secondaryColor = 'custom-secondary';
+        
+        // Clear active state from preset options
+        document.querySelectorAll('.theme-option[data-type="secondary"]').forEach(opt => 
+            opt.classList.remove('active'));
+    }
+    
+    updateTheme();
+}
+
+// Apply preset combination
+function applyPreset(primary, secondary) {
+    // Clear custom colors
+    customPrimaryColor = null;
+    customSecondaryColor = null;
+    
+    // Set colors
+    primaryColor = primary;
+    secondaryColor = secondary;
+    
+    // Update UI
+    document.querySelectorAll('.theme-option[data-type="primary"]').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.color === primary);
+    });
+    
+    document.querySelectorAll('.theme-option[data-type="secondary"]').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.color === secondary);
+    });
+    
+    // Update color pickers
+    document.getElementById('primaryColorPicker').value = colors[primary].main;
+    document.getElementById('secondaryColorPicker').value = colors[secondary].main;
+    
+    updateTheme();
+}
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -50,24 +131,45 @@ function setupThemeHandlers() {
                     opt.classList.remove('active'));
                 option.classList.add('active');
                 primaryColor = colorName;
+                customPrimaryColor = null; // Clear custom color
+                
+                // Update color picker
+                document.getElementById('primaryColorPicker').value = colors[colorName].main;
+                
             } else if (colorType === 'secondary') {
                 // Remove active class from secondary options
                 document.querySelectorAll('.theme-option[data-type="secondary"]').forEach(opt => 
                     opt.classList.remove('active'));
                 option.classList.add('active');
                 secondaryColor = colorName;
+                customSecondaryColor = null; // Clear custom color
+                
+                // Update color picker
+                document.getElementById('secondaryColorPicker').value = colors[colorName].main;
             }
             
             updateTheme();
         });
+    });
+    
+    // Setup color picker change handlers
+    document.getElementById('primaryColorPicker').addEventListener('change', (e) => {
+        e.target.nextElementSibling.style.background = '#28a745'; // Highlight apply button
+    });
+    
+    document.getElementById('secondaryColorPicker').addEventListener('change', (e) => {
+        e.target.nextElementSibling.style.background = '#28a745'; // Highlight apply button
     });
 }
 
 // Update theme with selected colors
 function updateTheme() {
     const root = document.documentElement;
-    const primary = colors[primaryColor];
-    const secondary = colors[secondaryColor];
+    
+    // Get primary color (custom or preset)
+    const primary = primaryColor === 'custom-primary' ? customPrimaryColor : colors[primaryColor];
+    // Get secondary color (custom or preset)
+    const secondary = secondaryColor === 'custom-secondary' ? customSecondaryColor : colors[secondaryColor];
     
     root.style.setProperty('--primary-color', primary.main);
     root.style.setProperty('--primary-light', primary.light);
@@ -90,8 +192,11 @@ function updateColorPreview() {
     const primaryPreview = document.querySelector('.preview-primary');
     const secondaryPreview = document.querySelector('.preview-secondary');
     
-    if (primaryPreview) primaryPreview.style.background = colors[primaryColor].main;
-    if (secondaryPreview) secondaryPreview.style.background = colors[secondaryColor].main;
+    const primary = primaryColor === 'custom-primary' ? customPrimaryColor : colors[primaryColor];
+    const secondary = secondaryColor === 'custom-secondary' ? customSecondaryColor : colors[secondaryColor];
+    
+    if (primaryPreview) primaryPreview.style.background = primary.main;
+    if (secondaryPreview) secondaryPreview.style.background = secondary.main;
 }
 
 // Setup upload handlers
