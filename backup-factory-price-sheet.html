@@ -6,14 +6,13 @@
     <title>Backup Factory - Battery Price List</title>
     <link rel="stylesheet" href="backup-factory-styles.css">
 </head>
-<body>
+<body data-theme="orange">
     <div id="app">
         <!-- Upload Section -->
         <div class="upload-section" id="uploadSection">
             <div class="logo-section">
                 <div class="logo">
-                    <div class="battery-icon"></div>
-                    <span class="plug-icon">🔌</span>
+                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/logo%20factory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
                 </div>
                 <div class="company-name">
                     <span class="backup">BACKUP</span>
@@ -23,10 +22,25 @@
             
             <h2>Battery Price List Generator</h2>
             
+            <!-- Theme Selector -->
+            <div class="theme-selector">
+                <h4>Choose Theme Color</h4>
+                <div class="theme-options">
+                    <div class="theme-option active" data-theme="orange">Orange</div>
+                    <div class="theme-option" data-theme="blue">Blue</div>
+                    <div class="theme-option" data-theme="green">Green</div>
+                    <div class="theme-option" data-theme="purple">Purple</div>
+                    <div class="theme-option" data-theme="red">Red</div>
+                    <div class="theme-option" data-theme="teal">Teal</div>
+                    <div class="theme-option" data-theme="indigo">Indigo</div>
+                    <div class="theme-option" data-theme="black">Black</div>
+                </div>
+            </div>
+            
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📁</div>
                 <div class="upload-text">Click to upload or drag & drop</div>
-                <div class="upload-subtext">BatteryPricing.json</div>
+                <div class="upload-subtext">BackUpFactoryPricingList.json</div>
             </div>
             
             <input type="file" id="fileInput" class="file-input" accept=".json">
