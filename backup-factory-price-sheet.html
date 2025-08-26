@@ -24,20 +24,36 @@
             
             <!-- Theme Selector -->
             <div class="theme-selector">
-                <h4>Choose Theme Color</h4>
+                <h4>Choose Primary Color</h4>
                 <div class="theme-options">
-                    <div class="theme-option active" data-theme="orange">Orange</div>
-                    <div class="theme-option" data-theme="blue">Blue</div>
-                    <div class="theme-option" data-theme="green">Green</div>
-                    <div class="theme-option" data-theme="purple">Purple</div>
-                    <div class="theme-option" data-theme="red">Red</div>
-                    <div class="theme-option" data-theme="teal">Teal</div>
-                    <div class="theme-option" data-theme="indigo">Indigo</div>
-                    <div class="theme-option" data-theme="black">Black</div>
-                    <div class="theme-option" data-theme="orange-blue">Orange + Blue</div>
-                    <div class="theme-option" data-theme="green-purple">Green + Purple</div>
-                    <div class="theme-option" data-theme="red-orange">Red + Orange</div>
-                    <div class="theme-option" data-theme="teal-indigo">Teal + Indigo</div>
+                    <div class="theme-option active" data-color="orange" data-type="primary">Orange</div>
+                    <div class="theme-option" data-color="blue" data-type="primary">Blue</div>
+                    <div class="theme-option" data-color="green" data-type="primary">Green</div>
+                    <div class="theme-option" data-color="purple" data-type="primary">Purple</div>
+                    <div class="theme-option" data-color="red" data-type="primary">Red</div>
+                    <div class="theme-option" data-color="teal" data-type="primary">Teal</div>
+                    <div class="theme-option" data-color="indigo" data-type="primary">Indigo</div>
+                    <div class="theme-option" data-color="black" data-type="primary">Black</div>
+                </div>
+                
+                <h4 style="margin-top: 20px;">Choose Secondary Color</h4>
+                <div class="theme-options secondary-options">
+                    <div class="theme-option" data-color="orange" data-type="secondary">Orange</div>
+                    <div class="theme-option active" data-color="blue" data-type="secondary">Blue</div>
+                    <div class="theme-option" data-color="green" data-type="secondary">Green</div>
+                    <div class="theme-option" data-color="purple" data-type="secondary">Purple</div>
+                    <div class="theme-option" data-color="red" data-type="secondary">Red</div>
+                    <div class="theme-option" data-color="teal" data-type="secondary">Teal</div>
+                    <div class="theme-option" data-color="indigo" data-type="secondary">Indigo</div>
+                    <div class="theme-option" data-color="black" data-type="secondary">Black</div>
+                </div>
+                
+                <div class="color-preview" id="colorPreview">
+                    <div class="preview-box">
+                        <div class="preview-primary"></div>
+                        <div class="preview-secondary"></div>
+                    </div>
+                    <p>Preview: Primary + Secondary</p>
                 </div>
             </div>
             

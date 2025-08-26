@@ -11,125 +11,15 @@ body {
     color: #333;
 }
 
-/* CSS Variables for Themes */
+/* CSS Variables for Dynamic Themes */
 :root {
     --primary-color: #ff6b35;
     --primary-light: #ff8c42;
     --primary-dark: #e55a2b;
-    --secondary-color: #333;
+    --secondary-color: #2196F3;
+    --secondary-light: #64B5F6;
+    --secondary-dark: #1976D2;
     --accent-color: #fff3e0;
-    --gradient-start: #ff6b35;
-    --gradient-end: #ff8c42;
-}
-
-[data-theme="blue"] {
-    --primary-color: #2196F3;
-    --primary-light: #64B5F6;
-    --primary-dark: #1976D2;
-    --secondary-color: #0D47A1;
-    --accent-color: #E3F2FD;
-    --gradient-start: #2196F3;
-    --gradient-end: #64B5F6;
-}
-
-[data-theme="green"] {
-    --primary-color: #4CAF50;
-    --primary-light: #81C784;
-    --primary-dark: #388E3C;
-    --secondary-color: #1B5E20;
-    --accent-color: #E8F5E9;
-    --gradient-start: #4CAF50;
-    --gradient-end: #81C784;
-}
-
-[data-theme="purple"] {
-    --primary-color: #9C27B0;
-    --primary-light: #BA68C8;
-    --primary-dark: #7B1FA2;
-    --secondary-color: #4A148C;
-    --accent-color: #F3E5F5;
-    --gradient-start: #9C27B0;
-    --gradient-end: #BA68C8;
-}
-
-[data-theme="red"] {
-    --primary-color: #F44336;
-    --primary-light: #EF5350;
-    --primary-dark: #D32F2F;
-    --secondary-color: #B71C1C;
-    --accent-color: #FFEBEE;
-    --gradient-start: #F44336;
-    --gradient-end: #EF5350;
-}
-
-[data-theme="teal"] {
-    --primary-color: #009688;
-    --primary-light: #4DB6AC;
-    --primary-dark: #00796B;
-    --secondary-color: #004D40;
-    --accent-color: #E0F2F1;
-    --gradient-start: #009688;
-    --gradient-end: #4DB6AC;
-}
-
-[data-theme="indigo"] {
-    --primary-color: #3F51B5;
-    --primary-light: #7986CB;
-    --primary-dark: #303F9F;
-    --secondary-color: #1A237E;
-    --accent-color: #E8EAF6;
-    --gradient-start: #3F51B5;
-    --gradient-end: #7986CB;
-}
-
-[data-theme="black"] {
-    --primary-color: #424242;
-    --primary-light: #757575;
-    --primary-dark: #212121;
-    --secondary-color: #000000;
-    --accent-color: #F5F5F5;
-    --gradient-start: #424242;
-    --gradient-end: #757575;
-}
-
-[data-theme="orange-blue"] {
-    --primary-color: #ff6b35;
-    --primary-light: #2196F3;
-    --primary-dark: #e55a2b;
-    --secondary-color: #0D47A1;
-    --accent-color: #fff3e0;
-    --gradient-start: #ff6b35;
-    --gradient-end: #2196F3;
-}
-
-[data-theme="green-purple"] {
-    --primary-color: #4CAF50;
-    --primary-light: #9C27B0;
-    --primary-dark: #388E3C;
-    --secondary-color: #4A148C;
-    --accent-color: #E8F5E9;
-    --gradient-start: #4CAF50;
-    --gradient-end: #9C27B0;
-}
-
-[data-theme="red-orange"] {
-    --primary-color: #F44336;
-    --primary-light: #ff6b35;
-    --primary-dark: #D32F2F;
-    --secondary-color: #e55a2b;
-    --accent-color: #FFEBEE;
-    --gradient-start: #F44336;
-    --gradient-end: #ff6b35;
-}
-
-[data-theme="teal-indigo"] {
-    --primary-color: #009688;
-    --primary-light: #3F51B5;
-    --primary-dark: #00796B;
-    --secondary-color: #1A237E;
-    --accent-color: #E0F2F1;
-    --gradient-start: #009688;
-    --gradient-end: #3F51B5;
 }
 
 /* Page Layout */
@@ -243,7 +133,7 @@ body {
 
 /* Price Table */
 .section-header {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: var(--primary-color);
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -252,6 +142,17 @@ body {
     margin-top: 20px;
     border-radius: 5px 5px 0 0;
     text-transform: uppercase;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-dark);
 }
 
 .section-header:first-of-type {
@@ -395,33 +296,44 @@ body {
     color: white;
 }
 
-.theme-option[data-theme="orange"] { border-color: #ff6b35; }
-.theme-option[data-theme="blue"] { border-color: #2196F3; }
-.theme-option[data-theme="green"] { border-color: #4CAF50; }
-.theme-option[data-theme="purple"] { border-color: #9C27B0; }
-.theme-option[data-theme="red"] { border-color: #F44336; }
-.theme-option[data-theme="teal"] { border-color: #009688; }
-.theme-option[data-theme="indigo"] { border-color: #3F51B5; }
-.theme-option[data-theme="black"] { border-color: #424242; }
-.theme-option[data-theme="orange-blue"] { 
-    border-color: #ff6b35; 
-    background: linear-gradient(45deg, #ff6b35, #2196F3);
+.theme-option[data-color="orange"] { border-color: #ff6b35; }
+.theme-option[data-color="blue"] { border-color: #2196F3; }
+.theme-option[data-color="green"] { border-color: #4CAF50; }
+.theme-option[data-color="purple"] { border-color: #9C27B0; }
+.theme-option[data-color="red"] { border-color: #F44336; }
+.theme-option[data-color="teal"] { border-color: #009688; }
+.theme-option[data-color="indigo"] { border-color: #3F51B5; }
+.theme-option[data-color="black"] { border-color: #424242; }
+
+.secondary-options .theme-option.active {
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
     color: white;
 }
-.theme-option[data-theme="green-purple"] { 
-    border-color: #4CAF50; 
-    background: linear-gradient(45deg, #4CAF50, #9C27B0);
-    color: white;
+
+.color-preview {
+    margin-top: 20px;
+    text-align: center;
 }
-.theme-option[data-theme="red-orange"] { 
-    border-color: #F44336; 
-    background: linear-gradient(45deg, #F44336, #ff6b35);
-    color: white;
+
+.preview-box {
+    display: flex;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px auto;
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.theme-option[data-theme="teal-indigo"] { 
-    border-color: #009688; 
-    background: linear-gradient(45deg, #009688, #3F51B5);
-    color: white;
+
+.preview-primary {
+    flex: 1;
+    background: var(--primary-color);
+}
+
+.preview-secondary {
+    flex: 1;
+    background: var(--secondary-color);
 }
 
 .upload-area {
@@ -466,7 +378,7 @@ body {
 }
 
 .upload-button {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     color: white;
     padding: 12px 30px;
     border: none;
@@ -479,7 +391,7 @@ body {
 }
 
 .upload-button:hover {
-    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    background: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
