@@ -314,6 +314,11 @@ function validateJSON(data) {
                 console.error('Each item must have "name" and "price"');
                 return false;
             }
+            // Optional: validate mAh if provided
+            if (Object.prototype.hasOwnProperty.call(item, 'mAh') && typeof item.mAh !== 'number') {
+                console.error('If provided, "mAh" must be a number');
+                return false;
+            }
         }
     }
     
@@ -361,7 +366,8 @@ function generatePriceList() {
                 items: chunk.map(item => ({
                     brand: brand,
                     name: item.name,
-                    price: item.price
+                    price: item.price,
+                    mAh: item.mAh
                 }))
             });
 
@@ -413,6 +419,7 @@ function createPage(page, totalPages, startSerial) {
                     <tr>
                         <th>S.No.</th>
                         <th>Model Description</th>
+                        <th>mAh</th>
                         <th>Price</th>
                     </tr>
                 </thead>
@@ -424,6 +431,7 @@ function createPage(page, totalPages, startSerial) {
                 <tr>
                     <td>${item.serial}</td>
                     <td>${item.name}</td>
+                    <td>${item.mAh ?? ''}</td>
                     <td><span class="price-currency">₹</span> ${item.price}</td>
                 </tr>
             `;
@@ -513,15 +521,15 @@ function showLoading() {
 function loadSampleData() {
     pricingData = {
         "iPhone": [
-            { "name": "iPhone 5G Battery", "price": 380 },
-            { "name": "iPhone 5S Battery", "price": 350 },
-            { "name": "iPhone 6G Battery", "price": 390 },
-            { "name": "iPhone 6 Plus Battery", "price": 540 }
+            { "name": "iPhone 5G Battery", "price": 380, "mAh": 1650 },
+            { "name": "iPhone 5S Battery", "price": 350, "mAh": 1560 },
+            { "name": "iPhone 6G Battery", "price": 390, "mAh": 1960 },
+            { "name": "iPhone 6 Plus Battery", "price": 540, "mAh": 2915 }
         ],
         "Samsung": [
-            { "name": "Galaxy A11 Battery", "price": 390 },
-            { "name": "Galaxy A71 Battery", "price": 340 },
-            { "name": "Galaxy A01 Battery", "price": 370 }
+            { "name": "Galaxy A11 Battery", "price": 390, "mAh": 1810 },
+            { "name": "Galaxy A71 Battery", "price": 340, "mAh": 2750 },
+            { "name": "Galaxy A01 Battery", "price": 370, "mAh": 1650 }
         ]
     };
     
