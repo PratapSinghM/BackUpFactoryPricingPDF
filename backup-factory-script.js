@@ -371,7 +371,9 @@ function parseExcelArrayBuffer(buffer) {
         }
 
         if (!out[brandRaw]) out[brandRaw] = [];
-        out[brandRaw].push({ name: nameRaw, price: priceNum, mAh: mahNum });
+        const obj = { name: nameRaw, price: priceNum };
+        if (typeof mahNum === 'number') obj.mAh = mahNum; // only include when valid number
+        out[brandRaw].push(obj);
     }
 
     if (!Object.keys(out).length) throw new Error('No valid rows after parsing');
@@ -396,10 +398,14 @@ function validateJSON(data) {
                 console.error('Each item must have "name" and "price"');
                 return false;
             }
-            // Optional: validate mAh if provided
-            if (Object.prototype.hasOwnProperty.call(item, 'mAh') && typeof item.mAh !== 'number') {
-                console.error('If provided, "mAh" must be a number');
-                return false;
+            // Optional: validate mAh if provided (allow empty/undefined)
+            if (Object.prototype.hasOwnProperty.call(item, 'mAh')) {
+                if (item.mAh === '' || item.mAh === null || typeof item.mAh === 'undefined') {
+                    // treat as not provided
+                } else if (typeof item.mAh !== 'number') {
+                    console.error('If provided, "mAh" must be a number');
+                    return false;
+                }
             }
         }
     }
@@ -550,7 +556,7 @@ function createHeader() {
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>📞 ${CONFIG.company.phone}</p>
-                <p>✉️ ${CONFIG.company.email}</p>
+                <p>${CONFIG.company.email}</p>
                 <p>🌐 ${CONFIG.company.website}</p>
             </div>
         </div>
