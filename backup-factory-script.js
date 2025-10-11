@@ -5,7 +5,7 @@ const CONFIG = {
     company: {
         phone: '+91 8169476676',
         email: 'Backupfactory83@gmail.com',
-        website: 'www.backupfactory.com'
+        website: 'https://www.backupfactory.in'
     }
 };
 

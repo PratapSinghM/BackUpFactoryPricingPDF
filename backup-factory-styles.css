@@ -128,7 +128,7 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
-    margin-bottom: 80px;
+    margin-bottom: 0;
 }
 
 /* Price Table */
@@ -224,10 +224,7 @@ body {
 
 /* Footer */
 .footer {
-    position: absolute;
-    bottom: 20mm;
-    left: 20mm;
-    right: 20mm;
+    margin-top: auto;
     border-top: 2px solid var(--primary-color);
     padding-top: 10px;
     display: flex;
@@ -235,7 +232,6 @@ body {
     align-items: center;
     font-size: 12px;
     color: #666;
-    z-index: 2;
 }
 
 .page-number {
