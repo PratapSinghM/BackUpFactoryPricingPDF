@@ -3,8 +3,8 @@ const CONFIG = {
     itemsPerPageFirst: 15,
     itemsPerPage: 16,
     company: {
-        phone: '+91 98765 43210',
-        email: 'info@backupfactory.com',
+        phone: '+91 8169476676',
+        email: 'Backupfactory83@gmail.com',
         website: 'www.backupfactory.com'
     }
 };
@@ -237,14 +237,33 @@ function setupUploadHandlers() {
 // Try to load from file system
 async function tryLoadFromFileSystem() {
     try {
-        console.log('Attempting to load BackUpFactoryPricingList.json...');
-        const fileContent = await window.fs.readFile('BackUpFactoryPricingList.json', { encoding: 'utf8' });
-        const data = JSON.parse(fileContent);
-        console.log('File loaded successfully from file system');
-        
-        if (validateJSON(data)) {
-            pricingData = data;
-            generatePriceList();
+        // Prefer Excel if present; fallback to JSON
+        if (window?.fs?.readFile) {
+            try {
+                console.log('Attempting to load BackUpFactoryPricingList.xlsx...');
+                const excelBuffer = await window.fs.readFile('BackUpFactoryPricingList.xlsx');
+                const parsed = parseExcelArrayBuffer(excelBuffer);
+                if (parsed && validateJSON(parsed)) {
+                    pricingData = parsed;
+                    generatePriceList();
+                    return;
+                }
+            } catch (e) {
+                console.log('XLSX not found or failed, trying JSON...');
+            }
+
+            try {
+                console.log('Attempting to load BackUpFactoryPricingList.json...');
+                const fileContent = await window.fs.readFile('BackUpFactoryPricingList.json', { encoding: 'utf8' });
+                const data = JSON.parse(fileContent);
+                if (validateJSON(data)) {
+                    pricingData = data;
+                    generatePriceList();
+                    return;
+                }
+            } catch (e) {
+                console.log('JSON not found or invalid.');
+            }
         }
     } catch (error) {
         console.log('File system load failed, showing upload interface');
@@ -257,43 +276,108 @@ function handleFile(file) {
     console.log('Processing file:', file.name);
     
     const messageArea = document.getElementById('messageArea');
-    
-    if (!file.name.endsWith('.json')) {
-        showError('Please upload a .json file');
+    const lower = file.name.toLowerCase();
+    const isExcel = lower.endsWith('.xlsx') || lower.endsWith('.xls') || lower.endsWith('.csv');
+
+    if (!isExcel) {
+        showError('Please upload an Excel file (.xlsx, .xls, .csv)');
         return;
     }
 
     showLoading();
 
     const reader = new FileReader();
-    
+
     reader.onload = (e) => {
         try {
-            const data = JSON.parse(e.target.result);
-            console.log('JSON parsed successfully');
-            
-            if (!validateJSON(data)) {
-                throw new Error('Invalid JSON structure');
+            const buffer = e.target.result;
+            const parsed = parseExcelArrayBuffer(buffer);
+
+            if (!validateJSON(parsed)) {
+                throw new Error('Invalid data structure from Excel');
             }
-            
-            pricingData = data;
+
+            pricingData = parsed;
             showSuccess('File loaded successfully! Generating price list...');
-            
-            setTimeout(() => {
-                generatePriceList();
-            }, 1000);
-            
+            setTimeout(() => generatePriceList(), 500);
         } catch (error) {
-            console.error('Error parsing JSON:', error);
-            showError(error.message);
+            console.error('Error parsing Excel:', error);
+            showError(error.message || 'Failed to parse Excel file');
         }
     };
-    
+
     reader.onerror = () => {
         showError('Failed to read file');
     };
-    
-    reader.readAsText(file);
+
+    reader.readAsArrayBuffer(file);
+}
+
+// Parse Excel ArrayBuffer into expected JSON shape
+function parseExcelArrayBuffer(buffer) {
+    if (typeof XLSX === 'undefined') {
+        throw new Error('Excel parser not loaded');
+    }
+    const data = new Uint8Array(buffer);
+    const workbook = XLSX.read(data, { type: 'array' });
+    const firstSheetName = workbook.SheetNames[0];
+    if (!firstSheetName) throw new Error('No sheets found in Excel file');
+    const ws = workbook.Sheets[firstSheetName];
+
+    // Rows keyed by header names
+    const rows = XLSX.utils.sheet_to_json(ws, { defval: '', raw: true });
+    if (!rows.length) throw new Error('No data rows found');
+
+    // Discover keys by header names (case/format agnostic)
+    const headerKeys = Object.keys(rows[0]);
+    const normalize = (s) => s.toString().trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+    const findKey = (candidates) => headerKeys.find(k => candidates.includes(normalize(k)));
+
+    const brandKey = findKey(['brand','brandname','series','brandseries']);
+    const nameKey = findKey(['name','model','modelname','description','modeldescription']);
+    const priceKey = findKey(['price','mrp','rate','amount','sellingprice','saleprice']);
+    const mahKey = findKey(['mah','capacity','batterycapacity','mahcapacity']);
+
+    if (!brandKey || !nameKey || !priceKey) {
+        throw new Error('Missing required headers: Brand/Name/Price');
+    }
+
+    const out = {};
+    for (const row of rows) {
+        const brandRaw = (row[brandKey] ?? '').toString().trim();
+        const nameRaw = (row[nameKey] ?? '').toString().trim();
+        const priceRaw = row[priceKey];
+        const mahRaw = mahKey ? row[mahKey] : undefined;
+
+        if (!brandRaw || !nameRaw) continue;
+
+        // Coerce price to number
+        let priceNum = null;
+        if (typeof priceRaw === 'number') priceNum = priceRaw;
+        else if (typeof priceRaw === 'string') {
+            const m = priceRaw.replace(/[,\s]/g, '').match(/\d+(?:\.\d+)?/);
+            if (m) priceNum = parseFloat(m[0]);
+        }
+        if (priceNum === null || Number.isNaN(priceNum)) continue;
+
+        // Optional mAh
+        let mahNum = undefined;
+        if (mahRaw !== undefined && mahRaw !== null && mahRaw !== '') {
+            if (typeof mahRaw === 'number') mahNum = mahRaw;
+            else if (typeof mahRaw === 'string') {
+                const mm = mahRaw.replace(/[,\s]/g, '').match(/\d+(?:\.\d+)?/);
+                if (mm) mahNum = parseFloat(mm[0]);
+            }
+        }
+
+        if (!out[brandRaw]) out[brandRaw] = [];
+        const obj = { name: nameRaw, price: priceNum };
+        if (typeof mahNum === 'number') obj.mAh = mahNum; // only include when valid number
+        out[brandRaw].push(obj);
+    }
+
+    if (!Object.keys(out).length) throw new Error('No valid rows after parsing');
+    return out;
 }
 
 // Validate JSON structure
@@ -314,10 +398,14 @@ function validateJSON(data) {
                 console.error('Each item must have "name" and "price"');
                 return false;
             }
-            // Optional: validate mAh if provided
-            if (Object.prototype.hasOwnProperty.call(item, 'mAh') && typeof item.mAh !== 'number') {
-                console.error('If provided, "mAh" must be a number');
-                return false;
+            // Optional: validate mAh if provided (allow empty/undefined)
+            if (Object.prototype.hasOwnProperty.call(item, 'mAh')) {
+                if (item.mAh === '' || item.mAh === null || typeof item.mAh === 'undefined') {
+                    // treat as not provided
+                } else if (typeof item.mAh !== 'number') {
+                    console.error('If provided, "mAh" must be a number');
+                    return false;
+                }
             }
         }
     }
@@ -468,7 +556,7 @@ function createHeader() {
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>📞 ${CONFIG.company.phone}</p>
-                <p>✉️ ${CONFIG.company.email}</p>
+                <p>${CONFIG.company.email}</p>
                 <p>🌐 ${CONFIG.company.website}</p>
             </div>
         </div>
