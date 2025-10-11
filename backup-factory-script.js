@@ -3,8 +3,8 @@ const CONFIG = {
     itemsPerPageFirst: 15,
     itemsPerPage: 16,
     company: {
-        phone: '+91 98765 43210',
-        email: 'info@backupfactory.com',
+        phone: '+91 8169476676',
+        email: 'Backupfactory83@gmail.com',
         website: 'www.backupfactory.com'
     }
 };
