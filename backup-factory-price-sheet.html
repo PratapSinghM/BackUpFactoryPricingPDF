@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backup Factory - Battery Price List</title>
     <link rel="stylesheet" href="backup-factory-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </head>
 <body data-theme="orange">
     <div id="app">
@@ -88,26 +89,23 @@
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📁</div>
                 <div class="upload-text">Click to upload or drag & drop</div>
-                <div class="upload-subtext">BackUpFactoryPricingList.json</div>
+                <div class="upload-subtext">BackUpFactoryPricingList.xlsx/.xls/.csv</div>
             </div>
             
-            <input type="file" id="fileInput" class="file-input" accept=".json">
-            <button class="upload-button" id="uploadButton">Choose JSON File</button>
+            <input type="file" id="fileInput" class="file-input" accept=".xlsx,.xls,.csv">
+            <button class="upload-button" id="uploadButton">Choose Excel File</button>
             
             <div id="messageArea"></div>
             
             <div class="instructions">
-                <h4>JSON Format Required:</h4>
-                <pre>{
-    "BrandName": [
-        {
-            "name": "Model Name",
-            "price": 999,
-            "mAh": 1650,
-            "series": "Series Name"
-        }
-    ]
-}</pre>
+                <h4>Excel Columns Expected:</h4>
+                <p>Include a header row. We match by column name and ignore others.</p>
+                <ul>
+                    <li>Brand: Brand, BrandName, or Series</li>
+                    <li>Name: Name, Model, Model Name, Description</li>
+                    <li>Price: Price, MRP, Rate, Amount</li>
+                    <li>mAh (optional): mAh, mAH, Capacity</li>
+                </ul>
             </div>
         </div>
         
