@@ -82,6 +82,8 @@ body {
     height: auto; /* keep aspect ratio */
     object-fit: contain;
     border-radius: 8px;
+    position: relative;
+    top: -15px; /* slight upward adjustment */
 }
 
 .company-name {
