@@ -553,7 +553,7 @@ function createHeader() {
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>📞 ${CONFIG.company.phone}</p>
-                <p>${CONFIG.company.email}</p>
+                <p>✉️ ${CONFIG.company.email}</p>
                 <p>🌐 ${CONFIG.company.website}</p>
             </div>
         </div>
