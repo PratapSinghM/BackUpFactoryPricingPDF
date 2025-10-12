@@ -56,8 +56,9 @@ body {
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start; /* top-align contact to logo */
+    justify-content: flex-start; /* reduce large middle gap */
+    gap: 24px; /* controlled spacing between sections */
     padding-bottom: 0; /* tightened per feedback */
     border-bottom: 3px solid var(--primary-color);
 }
@@ -69,8 +70,8 @@ body {
 }
 
 .logo {
-    width: 136px;
-    height: 136px;
+    width: 350px; /* requested larger logo */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,16 +79,15 @@ body {
 
 .logo img {
     width: 100%;
-    height: 100%;
+    height: auto; /* keep aspect ratio */
     object-fit: contain;
     border-radius: 8px;
+    position: relative;
+    top: -15px; /* slight upward adjustment */
 }
 
 .company-name {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--secondary-color);
-    letter-spacing: -1px;
+    display: none;
 }
 
 .backup {
@@ -102,6 +102,7 @@ body {
     text-align: right;
     position: relative;
     z-index: 2;
+    min-width: 200px; /* prevent cramped wrapping */
 }
 
 .contact-info h3 {
@@ -112,6 +113,7 @@ body {
 .contact-info p {
     margin: 3px 0;
     font-size: 14px;
+    white-space: nowrap; /* keep icons + text on one line */
 }
 
 .page-title {

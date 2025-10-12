@@ -546,17 +546,14 @@ function createHeader() {
         <div class="header">
             <div class="logo-section">
                 <div class="logo">
-                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/logo%20factory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/backup%20catory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
                 </div>
-                <div class="company-name">
-                    <span class="backup">BACKUP</span>
-                    <span class="factory">FACTORY</span>
-                </div>
+                <div class="company-name"></div>
             </div>
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>📞 ${CONFIG.company.phone}</p>
-                <p>${CONFIG.company.email}</p>
+                <p>✉️ ${CONFIG.company.email}</p>
                 <p>🌐 ${CONFIG.company.website}</p>
             </div>
         </div>
