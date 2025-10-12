@@ -329,14 +329,16 @@ function parseExcelArrayBuffer(buffer) {
     if (!rows.length) throw new Error('No data rows found');
 
     // Discover keys by header names (case/format agnostic)
+    // Enforce exact headers as requested: Brand, Name, Price, optional mAh
     const headerKeys = Object.keys(rows[0]);
     const normalize = (s) => s.toString().trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-    const findKey = (candidates) => headerKeys.find(k => candidates.includes(normalize(k)));
 
-    const brandKey = findKey(['brand','brandname','series','brandseries']);
-    const nameKey = findKey(['name','model','modelname','description','modeldescription']);
-    const priceKey = findKey(['price','mrp','rate','amount','sellingprice','saleprice']);
-    const mahKey = findKey(['mah','capacity','batterycapacity','mahcapacity']);
+    const findExact = (expected) => headerKeys.find(k => normalize(k) === expected);
+
+    const brandKey = findExact('brand');
+    const nameKey = findExact('name');
+    const priceKey = findExact('price');
+    const mahKey = findExact('mah');
 
     if (!brandKey || !nameKey || !priceKey) {
         throw new Error('Missing required headers: Brand/Name/Price');
