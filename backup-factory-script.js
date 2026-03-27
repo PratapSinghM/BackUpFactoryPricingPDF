@@ -483,7 +483,7 @@ function createPage(page, totalPages, startSerial) {
     let html = `
         <div class="page">
             <div class="watermark">BACKUP FACTORY</div>
-            ${createHeader()}
+            ${createHeaderV2()}
             ${page.number === 1 ? '<h2 class="page-title">BATTERY PRICE LIST 2026</h2>' : ''}
             <div class="content-area">
     `;
@@ -557,6 +557,48 @@ function createHeader() {
                 <p>📞 ${CONFIG.company.phone}</p>
                 <p>✉️ ${CONFIG.company.email}</p>
                 <p>🌐 ${CONFIG.company.website}</p>
+            </div>
+        </div>
+    `;
+}
+
+// Header with clickable contact links and inline SVG icons.
+function createHeaderV2() {
+    const phone = CONFIG.company.phone || '';
+    const waNumber = phone.replace(/[^\d]/g, '');
+    const email = CONFIG.company.email || '';
+    const website = CONFIG.company.website || '';
+
+    return `
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/backup%20catory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
+                </div>
+                <div class="company-name"></div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="ci-item">
+                    <svg class="ci-icon whatsapp" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+                        <path d="M20.52 3.488A10.933 10.933 0 0011.72 0C5.248 0 .02 5.229.02 11.704c0 2.062.541 4.073 1.574 5.852L0 24l6.594-1.724a11.682 11.682 0 005.122 1.222h.004c6.47 0 11.7-5.229 11.7-11.704a11.61 11.61 0 00-3.9-8.306zm-8.8 18.827h-.003a9.81 9.81 0 01-4.993-1.367l-.357-.211-3.914 1.024 1.045-3.817-.233-.392A9.82 9.82 0 011.91 11.7C1.909 6.573 6.076 2.4 11.203 2.4c2.6 0 5.042 1.012 6.873 2.85a9.62 9.62 0 012.846 6.858c-.002 5.127-4.172 9.207-9.203 9.207zm5.291-6.935c-.289-.145-1.71-.844-1.975-.94-.266-.097-.46-.145-.654.145-.193.289-.75.94-.92 1.133-.17.193-.34.217-.629.072-.289-.145-1.221-.449-2.326-1.431-.86-.766-1.44-1.712-1.61-2.001-.17-.289-.018-.445.127-.59.13-.129.289-.338.434-.508.145-.17.193-.289.289-.482.097-.193.048-.362-.024-.508-.072-.145-.654-1.58-.896-2.164-.236-.566-.477-.49-.654-.5l-.56-.01c-.193 0-.508.073-.773.362-.266.289-1.015.992-1.015 2.418 0 1.426 1.04 2.8 1.186 2.993.145.193 2.05 3.183 4.969 4.46.695.3 1.237.478 1.66.611.697.222 1.33.191 1.83.116.558-.083 1.71-.699 1.952-1.373.241-.674.241-1.252.169-1.373-.07-.12-.262-.193-.55-.338z"/>
+                    </svg>
+                    <a class="ci-link" href="https://wa.me/${waNumber}" target="_blank" rel="noopener">WhatsApp: ${phone}</a>
+                </div>
+                <div class="ci-item">
+                    <svg class="ci-icon email" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                    <a class="ci-link" href="mailto:${email}">${email}</a>
+                </div>
+                <div class="ci-item">
+                    <svg class="ci-icon globe" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"></path>
+                    </svg>
+                    <a class="ci-link" href="${website}" target="_blank" rel="noopener">${website}</a>
+                </div>
             </div>
         </div>
     `;
