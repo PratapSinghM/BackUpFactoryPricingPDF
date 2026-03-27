@@ -484,7 +484,7 @@ function createPage(page, totalPages, startSerial) {
         <div class="page">
             <div class="watermark">BACKUP FACTORY</div>
             ${createHeader()}
-            ${page.number === 1 ? '<h2 class="page-title">BATTERY PRICE LIST 2025</h2>' : ''}
+            ${page.number === 1 ? '<h2 class="page-title">BATTERY PRICE LIST 2026</h2>' : ''}
             <div class="content-area">
     `;
     
