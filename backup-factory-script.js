@@ -15,6 +15,7 @@ let primaryColor = 'orange';
 let secondaryColor = 'blue';
 let customPrimaryColor = null;
 let customSecondaryColor = null;
+let showContactDetails = true;
 
 // Color definitions
 const colors = {
@@ -119,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Setup theme handlers
 function setupThemeHandlers() {
     const themeOptions = document.querySelectorAll('.theme-option');
+    const contactDetailsToggle = document.getElementById('contactDetailsToggle');
     
     themeOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -160,6 +162,17 @@ function setupThemeHandlers() {
     document.getElementById('secondaryColorPicker').addEventListener('change', (e) => {
         e.target.nextElementSibling.style.background = '#28a745'; // Highlight apply button
     });
+
+    if (contactDetailsToggle) {
+        contactDetailsToggle.checked = showContactDetails;
+        contactDetailsToggle.addEventListener('change', (e) => {
+            showContactDetails = e.target.checked;
+
+            if (pricingData && document.getElementById('priceListContainer').innerHTML) {
+                generatePriceList();
+            }
+        });
+    }
 }
 
 // Update theme with selected colors
@@ -568,15 +581,8 @@ function createHeaderV2() {
     const waNumber = phone.replace(/[^\d]/g, '');
     const email = CONFIG.company.email || '';
     const website = CONFIG.company.website || '';
-
-    return `
-        <div class="header">
-            <div class="logo-section">
-                <div class="logo">
-                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/backup%20catory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
-                </div>
-                <div class="company-name"></div>
-            </div>
+    const headerClass = showContactDetails ? 'header' : 'header header-no-contact';
+    const contactHtml = showContactDetails ? `
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <div class="ci-item">
@@ -599,7 +605,17 @@ function createHeaderV2() {
                     </svg>
                     <a class="ci-link" href="${website}" target="_blank" rel="noopener">${website}</a>
                 </div>
+            </div>` : '';
+
+    return `
+        <div class="${headerClass}">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/PratapSinghM/BackUpFactoryPricingPDF/master/images/backup%20catory.png" alt="Backup Factory Logo" onerror="this.style.display='none'">
+                </div>
+                <div class="company-name"></div>
             </div>
+            ${contactHtml}
         </div>
     `;
 }
